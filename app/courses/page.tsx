@@ -32,7 +32,7 @@ const FEATURES = [
 
 const CoursesPage = () => {
     return (
-        <div className="max-w-5xl mx-auto py-14 px-4">
+        <div id="courses" className="max-w-5xl mx-auto py-14 px-4">
             <header className="mb-14 text-center">
             <h1 className="text-5xl font-extrabold tracking-tight text-blue-700 mb-4">
                 Courses & Programs

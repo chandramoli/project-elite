@@ -1,4 +1,6 @@
+'use client'
 import Heading from "@/modules/components/Heading"
+import Head from "next/head";
 
 const keyHighlights = [
     {title: "30,000+", description: "Students Trained",color:'yellow'},
@@ -7,9 +9,11 @@ const keyHighlights = [
 ]
 
 
+
 const HomePage =() =>{
     return(
-          <div className=" h-full flex flex-col">
+        <>
+          <div id="home" className=" h-full flex flex-col justify-center items-center pt-14">
             <div className="relative flex flex-col md:flex-row items-center  h-full justify-between w-full max-w-6xl px-6 py-16 gap-10">
                 <div className="flex-1 h-full flex flex-col gap-6 z-10">
                 <Heading className="!text-blue-900 font-extrabold" size="h1">
@@ -67,8 +71,11 @@ const HomePage =() =>{
                 ))}
             </div>
             </div>
+            </>
     )
 }
 
 
 export default HomePage;
+
+
