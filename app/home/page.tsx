@@ -44,7 +44,7 @@ const HomePage =() =>{
             </div>
 
             {/* Key Highlights */}
-            <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center bgwhite rounded-xl shadow-md py-8 px-4 gap-6 mb-12">
+            <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center bgwhite rounded-xl bg-white border shadow-md py-8 px-4 gap-6 mb-12">
                 {keyHighlights.map((highlight, idx) => (
                 <div
                     key={highlight.title}

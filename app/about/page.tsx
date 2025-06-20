@@ -4,7 +4,7 @@ export default function About() {
     return (
         <section
             id="about"
-            className="relative bg-gradient-to-br from-gray-900 via-black to-gray-800 py-16 px-4 md:px-12 rounded-t-xl shadow-lg "
+            className="relative bg-gradient-to-br from-gray-900 via-black to-gray-800 py-8 px-4 md:px-12 rounded-t-xl shadow-lg "
         >
             <div className="mb-8 text-center">
             <h2 className="text-4xl font-extrabold text-white mb-2 tracking-tight">
@@ -49,7 +49,7 @@ export default function About() {
             </ul>
             </div>
 
-            <div className="mb-10">
+            <div className="">
             <h3 className="text-2xl font-semibold text-emerald-400 mb-3">
                 Contact Us
             </h3>
