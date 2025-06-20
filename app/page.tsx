@@ -1,0 +1,33 @@
+'use client'
+import Head from "next/head";
+import About from "./about/page";
+import Courses from "./courses/page";
+import HomePage from "./home/page";
+
+
+const Main =()=>{
+
+    return (
+ <>
+ <Head>Project Elite | Home</Head>
+ <div className="flex flex-col items-center w-full bg-gradient-to-b from-white to-blue-50">
+            {/* Hero Section */}
+            <div className="w-full h-fit max-w-6xl px-6 mb-12">
+            <HomePage/>
+            </div>
+
+            {/* courses */}
+            <div className="w-full h-fit max-w-6xl px-6 mb-12">
+            <Courses />
+            </div>
+
+            {/* About Section */}
+            <div className="w-full h-fit ">
+            <About />
+            </div>
+        </div>
+        </>
+    );
+}
+
+export default Main;
