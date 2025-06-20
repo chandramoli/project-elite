@@ -1,6 +1,6 @@
 import React from "react";
 
-const COURSES: (string | JSX.Element)[] = [
+const COURSES: (string | React.JSX.Element)[] = [
     "Campus Placement Training",
     "Quantitative Aptitude",
     "Logical Reasoning",
