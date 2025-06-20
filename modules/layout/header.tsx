@@ -3,63 +3,32 @@ import Heading from "../components/Heading";
 
 const Header = () => {
   return (
-    <header className="text-black z-10 w-full bgwhite p-4 flex justify-between items-center fixed top-0">
-      <Heading className="" size="h1">Project Elite</Heading>
-      <nav className="mt-2">
-      <ul className="flex space-x-4">
-        <li>
-        <a
-          href="#home"
-          className="hover:underline"
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-20 px-8 py-4 flex items-center justify-between">
+      <Heading className="text-2xl text-gray-900 font-bold tracking-tight" size="h1">
+      Project Elite
+      </Heading>
+      <nav>
+      <ul className="flex gap-8 items-center">
+        {[
+        { label: "Home", id: "home" },
+        { label: "Courses", id: "courses" },
+        { label: "About", id: "about" },
+        { label: "Contact Us", id: "about" },
+        ].map(({ label, id }) => (
+        <li key={id}>
+          <a
+          href={`#${id}`}
+          className="text-gray-700 hover:text-blue-600 transition-colors font-medium px-2 py-1 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200"
           onClick={e => {
-          e.preventDefault();
-          const el = document.getElementById('home');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
+            e.preventDefault();
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
-        >
-          Home
-        </a>
+          >
+          {label}
+          </a>
         </li>
-<li>
-        <a
-          href="#courses"
-          className="hover:underline"
-          onClick={e => {
-          e.preventDefault();
-          const el = document.getElementById('courses');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          Courses
-        </a>
-        </li>
-
-        <li>
-        <a
-          href="#about"
-          className="hover:underline"
-          onClick={e => {
-          e.preventDefault();
-          const el = document.getElementById('about');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          About
-        </a>
-        </li>
-        <li>
-        <a
-          href="#contact"
-          className="hover:underline"
-          onClick={e => {
-          e.preventDefault();
-          const el = document.getElementById('about');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          Contact us
-        </a>
-        </li>
+        ))}
       </ul>
       </nav>
     </header>
