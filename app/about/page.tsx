@@ -49,7 +49,7 @@ export default function About() {
             </ul>
             </div>
 
-            <div className="">
+            <div className="" id="contact us">
             <h3 className="text-2xl font-semibold text-emerald-400 mb-3">
                 Contact Us
             </h3>
