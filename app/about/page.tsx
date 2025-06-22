@@ -62,15 +62,15 @@ export default function About() {
                     </li>
                     <li>
                     <span className="font-semibold text-emerald-300">Phone:</span>{" "}
-                    <a href="tel:+1234567890" className="underline hover:text-emerald-400">+1 234 567 890</a>
+                    <a href="tel:+917566513585" className="underline hover:text-emerald-400">+1 234 567 890</a>
                     </li>
                     <li>
                     <span className="font-semibold text-emerald-300">WhatsApp:</span>{" "}
-                    <a href="https://wa.me/1234567890" className="underline hover:text-emerald-400">Chat on WhatsApp</a>
+                    <a href="https://wa.me/917566513585" className="underline hover:text-emerald-400">Chat on WhatsApp</a>
                     </li>
                     <li>
                     <span className="font-semibold text-emerald-300">Location:</span>{" "}
-                    123 College Road, City, Country
+                    Sector R,392, Mahalakshmi Nagar, Indore, Madhya Pradesh 452010
                     </li>
                     <li className="flex gap-4 mt-2">
                     <a href="https://facebook.com/projectelite" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
