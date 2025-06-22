@@ -1,4 +1,5 @@
 'use client'
+import Link from "next/link";
 import Heading from "../components/Heading";
 
 const Header = () => {
@@ -13,20 +14,16 @@ const Header = () => {
         { label: "Home", id: "home" },
         { label: "Courses", id: "courses" },
         { label: "About", id: "about" },
-        { label: "Contact Us", id: "contact us" },
+        { label: "Contact Us", id: "#" },
         ].map(({ label, id }) => (
         <li key={id}>
-          <a
-          href={`#${id}`}
-          className="text-gray-700 font-semibold hover:text-blue-600 transition-colors px-2 py-1 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200"
-          onClick={e => {
-            e.preventDefault();
-            const el = document.getElementById(id);
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }}
+          <Link href={`/${id}`} 
+            className="text-gray-700 font-semibold active:ring-blue-200 hover:text-blue-600 transition-colors px-2 py-1 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200 scroll-smooth"
+            scroll={true}
           >
-          {label}
-          </a>
+            {label}
+          {/* </a> */}
+          </Link>
         </li>
         ))}
       </ul>
