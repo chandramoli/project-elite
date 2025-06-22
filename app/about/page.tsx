@@ -62,7 +62,7 @@ export default function About() {
                     </li>
                     <li>
                     <span className="font-semibold text-emerald-300">Phone:</span>{" "}
-                    <a href="tel:+917566513585" className="underline hover:text-emerald-400">+1 234 567 890</a>
+                    <a href="tel:+917566513585" className="underline hover:text-emerald-400">+917566513585</a>
                     </li>
                     <li>
                     <span className="font-semibold text-emerald-300">WhatsApp:</span>{" "}
