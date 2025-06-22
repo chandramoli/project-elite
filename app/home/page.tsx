@@ -1,6 +1,9 @@
 'use client'
 import Heading from "@/modules/components/Heading"
 import Head from "next/head";
+import { Form, Input, Button, Modal } from "antd";
+import React from "react";
+import RequestForm from "@/modules/home/request-form";
 
 const keyHighlights = [
     {title: "30,000+", description: "Students Trained",color:'yellow'},
@@ -11,6 +14,7 @@ const keyHighlights = [
 
 
 const HomePage =() =>{
+    const [open, setOpen] = React.useState(false);
     return(
         <>
           <div id="home" className=" h-full flex flex-col justify-center items-center pt-14">
@@ -24,7 +28,7 @@ const HomePage =() =>{
                 </Heading>
                 <button
                     type="button"
-                    onClick={() => {}}
+                    onClick={() =>setOpen(p=>!p) }
                     className="rounded-lg bg-blue-500 text-white px-6 py-3 font-semibold shadow hover:bg-blue-400 transition"
                 >
                     Request a demo
@@ -71,6 +75,19 @@ const HomePage =() =>{
                 ))}
             </div>
             </div>
+
+
+
+            {/* request form modal */}
+            <Modal
+            centered
+                        open={open}
+            onCancel={() => setOpen(false)}
+        footer={null}
+
+      >
+      <RequestForm showRquestModal={setOpen}/>
+      </Modal>
             </>
     )
 }
