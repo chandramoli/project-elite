@@ -7,15 +7,17 @@ import nodemailer from 'nodemailer';
 export async function sendEmail(formValues:RequestFormValues) {
 
   const transporter = nodemailer.createTransport({
-    service:'gmail',
+     host:process.env.HOSTINGER_MAIL_HOST,
+    secure: true, // ✅ use secure connection
+    port: Number(process.env.HOSTINGER_MAIL_PORT), // ✅ use port 465 for secure SMTP
     auth: {
-      user:  process.env.GMAIL_SMTP_USER, // ✅ sending from self
-      pass:  process.env.GMAIL_SMTP_PASS, // ✅ use environment variable for password
+      user:  process.env.HOSTINGER_USER_MAIL, // ✅ sending from self
+      pass:  process.env.HOSTINGER_MAIL_PASS, // ✅ use environment variable for password
     },
   });
 
 const mailOptions = {
-  from: `Website Contact Form <no-reply@${process.env.EMAIL_FROM}>', // or use the user's email`,
+  from: `Website Contact Form <${process.env.EMAIL_FROM}>`, // ✅ sending from self
   to: process.env.EMAIL_TO, // ✅ sending to self
   subject: 'New Client Query',
   html: `<p>You have received a new client query:</p>
