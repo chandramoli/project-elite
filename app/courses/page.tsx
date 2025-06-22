@@ -94,29 +94,30 @@ const CoursesPage = () => {
                 </ul>
                 </div>
                 <div className="flex-1">
-                <h4 className="text-lg font-semibold mb-4 text-gray-900">How We Work</h4>
+                <h4 className="text-lg font-semibold mb-4 text-gray-900">How We Work?</h4>
                 <ol className="flex flex-col gap-4">
-                    <li className="flex items-center gap-3">
+                      <li className="flex items-center gap-3">
+                    <span className="h-6 border-l-2 border-blue-500 mr-1" />
                     <span className="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
                     <span className="font-medium text-gray-900">Pre-assessment</span>
                     </li>
                     <li className="flex items-center gap-3">
-                    <span className="h-4 border-l-2 border-blue-700 mx-4" />
+                    <span className="h-6 border-l-2 border-blue-500 mr-1" />
                     <span className="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</span>
                     <span className="font-medium text-gray-900">Training Plan</span>
                     </li>
                     <li className="flex items-center gap-3">
-                    <span className="h-4 border-l-2 border-blue-700 mx-4" />
+                    <span className="h-6 border-l-2 border-blue-500 mr-1" />
                     <span className="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</span>
                     <span className="font-medium text-gray-900">Execution</span>
                     </li>
                     <li className="flex items-center gap-3">
-                    <span className="h-4 border-l-2 border-blue-700 mx-4" />
+                    <span className="h-6 border-l-2 border-blue-500 mr-1" />
                     <span className="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</span>
                     <span className="font-medium text-gray-900">Mock Tests</span>
                     </li>
                     <li className="flex items-center gap-3">
-                    <span className="h-4 border-l-2 border-blue-700 mx-4" />
+                    <span className="h-6 border-l-2 border-blue-500 mr-1" />
                     <span className="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">5</span>
                     <span className="font-medium text-gray-900">Placement Success</span>
                     </li>
