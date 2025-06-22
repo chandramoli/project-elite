@@ -13,7 +13,7 @@ const Header = () => {
         { label: "Home", id: "home" },
         { label: "Courses", id: "courses" },
         { label: "About", id: "about" },
-        { label: "Contact Us", id: "about" },
+        { label: "Contact Us", id: "contact us" },
         ].map(({ label, id }) => (
         <li key={id}>
           <a
