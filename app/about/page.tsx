@@ -58,7 +58,7 @@ export default function About() {
                 <ul className="space-y-3 text-gray-100">
                     <li>
                     <span className="font-semibold text-emerald-300">Email:</span>{" "}
-                    <a href="mailto:info@projectelite.com" className="underline hover:text-emerald-400">info@projectelite.com</a>
+                    <a href="mailto:info@projectelite.com" className="underline hover:text-emerald-400">info@projectelite.in</a>
                     </li>
                     <li>
                     <span className="font-semibold text-emerald-300">Phone:</span>{" "}
