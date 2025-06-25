@@ -8,7 +8,7 @@ const TrainersPage = async() => {
 
     const getTrainers = async (): Promise<any[]> => {
         try {
-            const res = await fetch('http://localhost:3000/api/sheet');
+            const res = await fetch('/api/sheet');
             if (!res.ok) throw new Error('Failed to fetch trainers');
             const data = await res.json();
             console.log('Fetched data:', data);
