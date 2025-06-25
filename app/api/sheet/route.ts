@@ -38,6 +38,9 @@ export async function GET() {
     return NextResponse.json({ data: rows, },{headers: corsHeaders,status: 200});
   } catch (error) {
     console.error('Error fetching sheet data:', error);
-    return NextResponse.json({ error: 'Failed to fetch sheet data' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to fetch sheet data' }, {
+      status: 500,
+      headers: corsHeaders,
+    });
   }
 }
