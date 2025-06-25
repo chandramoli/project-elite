@@ -27,8 +27,8 @@ const TrainersPage = async() => {
 
     return (
 <section id="trainers" className="relative container mx-auto px-4 py-6 overflow-hidden">
-  <header className="mb-12 flex items-center z-10 justify-between relative">
-    <h1 className="text-3xl md:text-5xl text-center font-extrabold text-blue-700 tracking-tight">
+  <header className="mb-12 flex items-center justify-center w-full z-10 relative">
+    <h1 className="text-3xl md:text-5xl max-w-full font-extrabold text-blue-700 tracking-tight">
       Meet Our Trainers
     </h1>
   </header>
