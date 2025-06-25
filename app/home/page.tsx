@@ -7,7 +7,7 @@ import RequestForm from "@/modules/home/request-form";
 
 const keyHighlights = [
     {title: "30,000+", description: "Students Trained",color:'yellow'},
-    {title: "7+", description: "Years of Experience", color:'blue'},
+    {title: "10+", description: "Years of Experience", color:'blue'},
     {title: "10000+", description: "Corporate Professionals Trained",},
 ]
 
