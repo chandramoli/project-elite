@@ -1,24 +1,24 @@
 // app/api/sheet/route.ts
 import { google } from 'googleapis';
-import path from 'path';
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*', // Or restrict to 'https://www.projectelite.in'
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+export function OPTIONS() {
+  return NextResponse.json({}, {
+    status: 200,
+    headers: corsHeaders,
+  });
 }
 
 export async function GET() {
-  
   try {
-    const keyFilePath = path.join(process.cwd(), 'credentials.json');
-    const keyFile = await fs.readFile(keyFilePath, 'utf8');
-
     const auth = new google.auth.GoogleAuth({
-      credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON),
+      credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON!),
       scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
     });
 
@@ -33,9 +33,12 @@ export async function GET() {
     });
 
     const rows = response.data.values;
-    console.log('Fetched rows:', response);
 
-    return NextResponse.json({ data: rows, },{headers: corsHeaders,status: 200});
+    return NextResponse.json({ data: rows }, {
+      status: 200,
+      headers: corsHeaders,
+    });
+
   } catch (error) {
     console.error('Error fetching sheet data:', error);
     return NextResponse.json({ error: 'Failed to fetch sheet data' }, {
