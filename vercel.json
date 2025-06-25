@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "projectelite.in" }],
+      "destination": "https://www.projectelite.in/$1",
+      "permanent": true
+    }
+  ]
+}
