@@ -18,8 +18,8 @@ const HomePage =() =>{
     return(
         <>
           <div id="home" className=" h-full flex flex-col justify-center items-center pt-14">
-            <div className="relative flex flex-col md:flex-row items-center  h-full justify-between w-full max-w-6xl px-6 py-16 gap-10">
-                <div className="flex-1 h-full flex flex-col gap-6 z-10 relative">
+            <div className="relative flex flex-col md:flex-row items-center  h-full justify-between w-full max-w-6xl px-6 py-16 gap-8">
+                <div className="flex-1 h-full flex  flex-col gap-6 z-10 relative ">
                     {/* Decorative graphics behind content */}
                     <div className="absolute inset-0 -z-10 pointer-events-none">
                         {/* Example: Blurred colored circles */}
@@ -42,7 +42,7 @@ const HomePage =() =>{
                         </div>
                     </div>
                     <Heading className="!text-blue-700 font-extrabold drop-shadow-lg" size="h1">
-                        Not Just Training. The <span className="!text-emerald-400 animate-pulse">ELITE</span> Transformation.
+                        Not Just Training. The <span className="!text-emerald-400 ">ELITE</span> Transformation.
                     </Heading>
                     <Heading className="!text-gray-600" size="h4">
                         Campus Placement & Career Readiness Made Easy.
@@ -50,7 +50,7 @@ const HomePage =() =>{
                     <button
                         type="button"
                         onClick={() => setOpen(p => !p)}
-                        className="rounded-lg bg-gradient-to-r from-blue-500 to-emerald-400 text-white px-6 py-3 font-semibold shadow-lg hover:scale-105 hover:from-blue-400 hover:to-emerald-300 transition-all duration-200"
+                        className="rounded-lg bg-gradient-to-r from-blue-500 to-emerald-400 text-white !w-full max-w-[30rem] py-3 font-semibold shadow-lg hover:scale-105 hover:from-blue-400 hover:to-emerald-300 transition-all duration-200"
                     >
                         <span className="inline-flex items-center gap-2">
                             Request a demo
@@ -69,7 +69,7 @@ const HomePage =() =>{
                     alt="Hero"
                     width={"100%"}
                     className="object-cover rounded-2xl shadow-lg opacity-80"
-                    style={{ width: "100%", height: "22rem", maxWidth: 400 }}
+                    style={{ width: "100%", height: "22rem", maxWidth: 500 }}
                     sizes="(max-width: 768px) 100vw, 400px"
                   
                 />
