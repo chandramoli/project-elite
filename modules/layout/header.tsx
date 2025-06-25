@@ -12,13 +12,14 @@ const Header = () => {
       <ul className="md:flex gap-2 items-center hidden">
         {[
         { label: "Home", id: "home" },
+        { label: "Trainers", id: "trainers" },
         { label: "Courses", id: "courses" },
         { label: "About", id: "about" },
-        { label: "Contact Us", id: "#" },
+        { label: "Contact Us", id: "contact us" },
         ].map(({ label, id }) => (
         <li key={id}>
-          <Link href={`/${id}`} 
-            className="text-gray-700 font-semibold active:ring-blue-200 hover:text-blue-600 transition-colors px-2 py-1 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200 scroll-smooth"
+          <Link href={`#${id}`} 
+            className="text-gray-700 font-semibold active:ring-blue-200 hover:text-blue-600 transition-colors px-2 py-1 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200 !scroll-smooth"
             scroll={true}
           >
             {label}
