@@ -8,7 +8,7 @@ const TrainersPage = async() => {
 
     const getTrainers = async (): Promise<any[]> => {
         try {
-            const res = await fetch('/api/sheet');
+            const res = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL+'/sheet' );
             if (!res.ok) throw new Error('Failed to fetch trainers');
             const data = await res.json();
             console.log('Fetched data:', data);
