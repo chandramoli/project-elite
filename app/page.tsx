@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import About from "./about/page";
 import Courses from "./courses/page";
 import HomePage from "./home/page";
+import TrainersPage from "./trainers/page";
 
 
 export const metadata: Metadata= {
@@ -19,6 +20,13 @@ const Main =()=>{
             <div className="w-full h-fit max-w-6xl px-6 mb-12">
             <HomePage/>
             </div>
+
+ {/* trainers */}
+            <div className="w-full h-fit max-w-6xl px-6 mb-12">
+            <TrainersPage />
+            </div>
+
+
 
             {/* courses */}
             <div className="w-full h-fit max-w-6xl px-6 mb-12">
