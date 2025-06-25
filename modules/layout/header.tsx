@@ -5,9 +5,7 @@ import Heading from "../components/Heading";
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full text-center bg-white shadow-md z-20 md:px-8 py-4 md:flex md:items-center md:justify-between">
-      <Heading className="text-2xl md:text-center text-gray-900 font-bold tracking-tight" size="h1">
-      Project Elite
-      </Heading>
+    <img src='/assets/logo.jpeg' className="w-12 h-12 "/>
       <nav>
       <ul className="md:flex gap-2 items-center hidden">
         {[
