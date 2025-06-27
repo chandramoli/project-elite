@@ -1,14 +1,17 @@
 import { Card } from 'antd';
 import Meta from 'antd/es/card/Meta';
 
+export const metadata = {
+  title: 'Our Trainers | Project ELITE',
+  description: 'Meet our experienced and professional trainers who will guide you to success.',
+};
 
-
-const TrainersPage = async() => {
+const TrainersPage =async () => {
 
 
     const getTrainers = async (): Promise<any[]> => {
         try {
-            const res = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL+'/sheet' );
+            const res = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL+'/sheet',{cache:'no-store'} );
             if (!res.ok) throw new Error('Failed to fetch trainers');
             const data = await res.json();
             console.log('Fetched data:', data);
@@ -25,8 +28,30 @@ const TrainersPage = async() => {
     // Log trainers to inspect the structure
     console.log('Fetched trainers:', trainers);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: trainers.map((trainer, index) => ({
+  "@type": "ListItem",
+  position: index + 1,
+  item: {
+    "@type": "Person",
+    name: trainer[0],
+    jobTitle: trainer[1],
+    image: trainer[2] || '',
+    description: trainer.bio || '',
+  }
+}))
+
+  };
+
     return (
-<section id="trainers" className="relative container mx-auto px-4 py-6 overflow-hidden">
+      <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+<main id="trainers" className="relative h-full mx-auto px-4 py-6 overflow-hidden">
   <header className="mb-12 flex items-center justify-center w-full z-10 relative">
     <h1 className="text-3xl md:text-5xl max-w-full font-extrabold text-blue-700 tracking-tight">
       Meet Our Trainers
@@ -37,7 +62,7 @@ const TrainersPage = async() => {
   <div className="relative z-10 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {trainers && trainers.length > 0 ? (
       trainers.map((trainer: any, idx: number) => (
-        <div
+        <article
           key={trainer.id || trainer[0] || idx}
           className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 flex flex-col overflow-hidden"
         >
@@ -55,7 +80,7 @@ const TrainersPage = async() => {
               <p className="text-gray-600 text-sm mt-auto">{trainer.bio}</p>
             )}
           </div>
-        </div>
+           </article>
       ))
     ) : (
       <div className="col-span-full text-center text-gray-400 text-lg">
@@ -86,8 +111,8 @@ const TrainersPage = async() => {
   >
     <rect x="0" y="0" width="300" height="300" rx="150" fill="#f472b6" />
   </svg>
-</section>
-
+</main>
+</>
     );
 }
 

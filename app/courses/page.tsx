@@ -1,5 +1,10 @@
 import React from "react";
 
+export const metadata = {
+  title: 'Courses & Programs | Project ELITE',
+  description: 'Explore industry-ready courses and training programs including aptitude, reasoning, resume building, and mock interviews for placement success.',
+};
+
 const COURSES: (string | React.JSX.Element)[] = [
     "Campus Placement Training",
     "Quantitative Aptitude",
@@ -30,9 +35,35 @@ const FEATURES = [
     "Personalized Feedback",
 ];
 
+
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Project ELITE Courses",
+  "itemListElement": COURSES.map((item, index) => {
+    const text = typeof item === 'string' ? item : 'Custom Training'; // fallback if JSX
+    return {
+      "@type": "Course",
+      "name": text,
+      "position": index + 1,
+      "provider": {
+        "@type": "Organization",
+        "name": "Project ELITE",
+        "url": "https://yourdomain.com"
+      }
+    };
+  }),
+};
+
 const CoursesPage = () => {
     return (
-        <div id="courses" className="max-w-5xl mx-auto py-14 px-4">
+        <>
+     <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+/>
+        <main id="courses" className=" py-6 px-4">
             <header className="mb-14 text-center">
             <h1 className="text-5xl font-extrabold tracking-tight text-blue-700 mb-4">
                 Courses & Programs
@@ -67,7 +98,7 @@ const CoursesPage = () => {
             </div>
             </section>
 
-            <section className="bg-gray-50 rounded-2xl shadow-md p-8 mb-14 border border-gray-200">
+            <section className="bg-white rounded-2xl shadow-md p-8 border border-gray-200">
             <div className="flex flex-col md:flex-row md:items-start md:gap-12 gap-8">
                 <div className="flex-1">
                 <h2 className="text-2xl font-bold text-blue-700 mb-2 flex items-center gap-2">
@@ -94,7 +125,7 @@ const CoursesPage = () => {
                 </ul>
                 </div>
                 <div className="flex-1">
-                <h4 className="text-lg font-semibold mb-4 text-gray-900">How We Work?</h4>
+                <h4 className="text-lg font-semibold mb-4 text-blue-700">How We Work?</h4>
                 <ol className="flex flex-col gap-4">
                       <li className="flex items-center gap-3">
                     <span className="h-6 border-l-2 border-blue-500 mr-1" />
@@ -125,7 +156,8 @@ const CoursesPage = () => {
                 </div>
             </div>
             </section>
-        </div>
+        </main>
+        </>
     );
 };
 

@@ -4,6 +4,7 @@ import About from "./about/page";
 import Courses from "./courses/page";
 import HomePage from "./home/page";
 import TrainersPage from "./trainers/page";
+import ContactUs from "./contact-us/page";
 
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ const Main =()=>{
 
     return (
  <>
- <div className="flex flex-col items-center w-full bg-gradient-to-b snap-y snap-mandatory overflow-y-scroll from-white to-blue-50">
+ <div className="flex flex-col items-center justify-center w-full bg-gradient-to-b from-white to-blue-50">
             {/* Hero Section */}
             <div className="w-full  snap-start h-full max-w-6xl px-6 mb-12">
             <HomePage/>
@@ -59,9 +60,14 @@ const Main =()=>{
             </div>
 
             {/* About Section */}
-            <div className="w-full snap-start h-full ">
+            <div className="w-full snap-start h-full max-w-6xl px-6  mb-22">
             <About />
             </div>
+
+            <footer className="w-full snap-start h-full ">
+
+            <ContactUs/>
+        </footer>
         </div>
         </>
     );

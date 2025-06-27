@@ -17,7 +17,7 @@ const HomePage =() =>{
     const [open, setOpen] = React.useState(false);
     return(
         <>
-          <div id="home" className=" h-full flex flex-col justify-center items-center pt-16">
+          <div id="home" className=" h-full flex flex-col justify-center items-center ">
             <div className="relative flex flex-col md:flex-row items-center  h-full justify-between w-full max-w-6xl px-6 py-16 gap-8">
                 <div className="flex-1 h-full flex  flex-col gap-7 z-10 relative ">
                     {/* Decorative graphics behind content */}
@@ -48,7 +48,7 @@ const HomePage =() =>{
                         </div>
                     </div>
                     
-                    <h1 className="!font-montserrat text-gray-600 leading-3 tracking-wide font-extrabold uppercase text-2xl">project Elite</h1>
+                    <h1 className="!font-montserrat text-gray-900 opacity-30 leading-4 drop-shadow-md font-extrabold uppercase text-2xl ">project Elite</h1>
 
                     <Heading className="!text-blue-700 font-extrabold drop-shadow-lg" size="h1">
                         Not Just Training. The <span className="!text-emerald-400 ">ELITE</span> Transformation.
@@ -102,7 +102,7 @@ const HomePage =() =>{
             </div>
 
             {/* Key Highlights */}
-            <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center bgwhite rounded-xl bg-white border shadow-md py-8 px-4 gap-6 mb-12">
+            <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center rounded-xl bg-white drop-shadow-md py-8 px-4 gap-6 mb-12">
                 {keyHighlights.map((highlight, idx) => (
                 <div
                     key={highlight.title}
