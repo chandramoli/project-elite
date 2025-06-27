@@ -17,7 +17,7 @@ const HomePage =() =>{
     const [open, setOpen] = React.useState(false);
     return(
         <>
-          <div id="home" className=" h-full flex flex-col justify-center items-center pt-24">
+          <div id="home" className=" h-full flex flex-col justify-center items-center pt-16">
             <div className="relative flex flex-col md:flex-row items-center  h-full justify-between w-full max-w-6xl px-6 py-16 gap-8">
                 <div className="flex-1 h-full flex  flex-col gap-7 z-10 relative ">
                     {/* Decorative graphics behind content */}
