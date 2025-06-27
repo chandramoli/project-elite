@@ -19,7 +19,7 @@ const HomePage =() =>{
         <>
           <div id="home" className=" h-full flex flex-col justify-center items-center pt-24">
             <div className="relative flex flex-col md:flex-row items-center  h-full justify-between w-full max-w-6xl px-6 py-16 gap-8">
-                <div className="flex-1 h-full flex  flex-col gap-5 z-10 relative ">
+                <div className="flex-1 h-full flex  flex-col gap-7 z-10 relative ">
                     {/* Decorative graphics behind content */}
                     <div className="absolute inset-0 -z-10 pointer-events-none">
                         {/* Example: Blurred colored circles */}
