@@ -17,9 +17,9 @@ const HomePage =() =>{
     const [open, setOpen] = React.useState(false);
     return(
         <>
-          <div id="home" className=" h-full flex flex-col justify-center items-center pt-14">
+          <div id="home" className=" h-full flex flex-col justify-center items-center pt-24">
             <div className="relative flex flex-col md:flex-row items-center  h-full justify-between w-full max-w-6xl px-6 py-16 gap-8">
-                <div className="flex-1 h-full flex  flex-col gap-6 z-10 relative ">
+                <div className="flex-1 h-full flex  flex-col gap-5 z-10 relative ">
                     {/* Decorative graphics behind content */}
                     <div className="absolute inset-0 -z-10 pointer-events-none">
                         {/* Example: Blurred colored circles */}
@@ -41,12 +41,31 @@ const HomePage =() =>{
                             </svg>
                         </div>
                     </div>
+                    
+                    <h1 className="!font-montserrat text-gray-600 leading-3 tracking-wide font-extrabold uppercase text-2xl">project Elite</h1>
+
                     <Heading className="!text-blue-700 font-extrabold drop-shadow-lg" size="h1">
                         Not Just Training. The <span className="!text-emerald-400 ">ELITE</span> Transformation.
                     </Heading>
+<h2>
                     <Heading className="!text-gray-600" size="h4">
                         Campus Placement & Career Readiness Made Easy.
                     </Heading>
+</h2>
+
+                    <div className="flex gap-9 ">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold shadow">
+                            100% Placement Support
+                        </span>
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold shadow">
+                            Proven Results
+                        </span>
+                        <span className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold shadow">
+                            Industry Experts
+                        </span>
+                    </div>
+
+
                     <button
                         type="button"
                         onClick={() => setOpen(p => !p)}
