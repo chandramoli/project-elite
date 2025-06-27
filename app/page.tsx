@@ -7,17 +7,25 @@ import TrainersPage from "./trainers/page";
 
 
 export const metadata: Metadata = {
-  title: "ProjectElite – Portfolio & Courses by [Your Name]",
-  description: "ProjectElite is the personal portfolio and course platform by [Your Name], showcasing web development projects, expert trainers, and professional growth.",
-  keywords: ["ProjectElite", "projectelite.in", "web development", "portfolio", "trainers", "courses"],
+  title: "ProjectElite – Expert Trainers & Courses",
+  description: "ProjectElite is an agency providing expert trainers for professional training and development. Explore our portfolio and training solutions.",
+  keywords: [
+    "ProjectElite",
+    "projectelite.in",
+    "web development",
+    "training agency",
+    "expert trainers",
+    "courses",
+    "professional development"
+  ],
   openGraph: {
-    title: "ProjectElite – Portfolio & Courses",
-    description: "Showcasing skills, trainers, and development courses by Project Elite.",
+    title: "ProjectElite – Expert Trainers & Courses",
+    description: "Agency offering expert trainers and professional development courses. Explore our portfolio and training solutions.",
     url: "https://projectelite.in",
-    siteName: "ProjectElite",
+    siteName: "Projectelite",
     images: [
       {
-        url: "/assets/logo.jpeg", // add this file in your public/ directory
+        url: "/assets/logo.jpeg",
         width: 1200,
         height: 630,
         alt: "ProjectElite website preview",
