@@ -23,18 +23,24 @@ const HomePage =() =>{
                     {/* Decorative graphics behind content */}
                     <div className="absolute inset-0 -z-10 pointer-events-none">
                         {/* Example: Blurred colored circles */}
-                        <div className="absolute top-0 left-0 w-40 h-40 bg-blue-200 rounded-full filter blur-3xl opacity-60 animate-pulse" />
+                        <div className="absolute top-0 left-0 w-40 h-40 bg-blue-200 rounded-full filter blur-3xl opacity-70 animate-pulse" />
                         <div className="absolute bottom-0 right-0 w-52 h-52 bg-emerald-200 rounded-full filter blur-2xl opacity-50 animate-pulse" />
                         <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-yellow-100 rounded-full filter blur-xl opacity-40 -translate-x-1/2 -translate-y-1/2" />
                         {/* Animated sparkles */}
-                        <div className="absolute top-10 left-1/2 animate-pulse">
+                          <div className="absolute top-8 left-1/4 animate-pulse">
+                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="2" fill="#f472b6" opacity="0.7"/>
+                                <circle cx="18" cy="6" r="1" fill="#38bdf8" opacity="0.8"/>
+                            </svg>
+                        </div>
+                        <div className="absolute top-19 left-1/2 animate-pulse">
                             <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
                                 <circle cx="16" cy="16" r="3" fill="#38bdf8" opacity="0.7"/>
                                 <circle cx="8" cy="8" r="1.5" fill="#facc15" opacity="0.8"/>
                                 <circle cx="24" cy="10" r="2" fill="#34d399" opacity="0.7"/>
                             </svg>
                         </div>
-                        <div className="absolute bottom-8 right-1/3 animate-pulse">
+                        <div className="absolute bottom-24 right-1/3 animate-pulse">
                             <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="2" fill="#f472b6" opacity="0.7"/>
                                 <circle cx="18" cy="6" r="1" fill="#38bdf8" opacity="0.8"/>
