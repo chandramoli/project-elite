@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "ProjectElite – Portfolio & Courses by [Your Name]",
   description: "ProjectElite is the personal portfolio and course platform by [Your Name], showcasing web development projects, expert trainers, and professional growth.",
   keywords: ["ProjectElite", "projectelite.in", "web development", "portfolio", "trainers", "courses"],
-  authors: [{ name: "[]" }],
   openGraph: {
     title: "ProjectElite – Portfolio & Courses",
     description: "Showcasing skills, trainers, and development courses by Project Elite.",
