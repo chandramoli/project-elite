@@ -5,27 +5,38 @@ export const metadata = {
   description: 'Explore industry-ready courses and training programs including aptitude, reasoning, resume building, and mock interviews for placement success.',
 };
 
-const COURSES: (string | React.JSX.Element)[] = [
-    "Campus Placement Training",
-    "Quantitative Aptitude",
-    "Logical Reasoning",
-    "Verbal Ability",
-    <>
-        Technical Tests <span className="text-gray-500">(Branch-specific)</span>
-    </>,
-    <>
-        Interview Skills <span className="text-gray-500">(HR + Tech)</span>
-    </>,
-    "Custom Modules",
-    "Resume Building Workshops",
-    "Group Discussion Bootcamps",
-    <>
-        Mock Interviews <span className="text-gray-500">(AI + Live)</span>
-    </>,
-    <>
-        Company-Specific Prep{" "}
-        <span className="text-gray-500">(e.g., TCS, Infosys, Capgemini)</span>
-    </>,
+type Course = {
+    name: string;
+    features?: React.ReactNode;
+};
+
+const COURSES: Course[] = [
+    { name: "Campus Placement Training" },
+    { name: "Quantitative Aptitude" },
+    { name: "Logical Reasoning" },
+    {
+        name: "Technical Tests",
+        features: <span className="text-gray-500">(Branch-specific)</span>,
+    },
+    {
+        name: "Interview Skills",
+        features: <span className="text-gray-500">(HR + Tech)</span>,
+    },
+    { name: "Custom Modules" },
+    { name: "Resume Building Workshops" },
+    { name: "Group Discussion Bootcamps" },
+    {
+        name: "Mock Interviews",
+        features: <span className="text-gray-500">(AI + Live)</span>,
+    },
+    {
+        name: "Company-Specific Prep",
+        features: (
+            <span className="text-gray-500">
+                (e.g., TCS, Infosys, Capgemini)
+            </span>
+        ),
+    },
 ];
 
 const FEATURES = [
@@ -84,7 +95,10 @@ const CoursesPage = () => {
                 {COURSES.map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-base leading-relaxed">
                     <span className="mt-1 w-2 h-2 bg-blue-700 rounded-full flex-shrink-0" />
-                    <span className="text-gray-900">{item}</span>
+                    <div className="flex items-center gap-1">
+                    <span className="text-gray-900">{item.name}</span>
+                    <span className="text-gray-500">{item?.features}</span>
+                    </div>
                     </li>
                 ))}
                 </ul>
