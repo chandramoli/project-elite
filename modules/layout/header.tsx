@@ -1,4 +1,4 @@
-'use client'
+
 import Link from "next/link";
 import Heading from "../components/Heading";
 
@@ -14,10 +14,10 @@ const Header = () => {
       <ul className="md:flex gap-2 items-center hidden">
         {[
         { label: "Home", id: "/" },
-        { label: "Trainers", id: "trainers" },
-        { label: "Courses", id: "courses" },
-        { label: "About", id: "about" },
-        { label: "Contact Us", id: "contact-us" },
+        { label: "Trainers", id: "/trainers" },
+        { label: "Courses", id: "/courses" },
+        { label: "About", id: "/about" },
+        { label: "Contact Us", id: "/contact-us" },
         ].map(({ label, id }) => (
         <li key={id}>
           <Link href={`${id}`} 
