@@ -47,28 +47,37 @@ const FEATURES = [
 ];
 
 
-
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Project ELITE Courses",
-  "itemListElement": COURSES.map((course, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "item": {
-      "@type": "Course",
-      "name": course.name,
-        "features": course.features || "",
-      "description": 'Courses and training programs offered by Project ELITE to prepare students for campus placements.s',
-      "provider": {
-        "@type": "Organization",
-        "name": "Project ELITE",
-        "url": "https://projectelite.in"
-      },
-      // Optional: add `hasCourseInstance` if you have course sessions here
+  "@type": "Service",
+  "name": "Campus Placement Training",
+  "description": "Project ELITE offers campus placement training services to students across India, including aptitude training, resume building, and interview preparation.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Project ELITE",
+    "url": "https://www.projectelite.in",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
     }
-  })),
-};
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "serviceType": "Campus Placement Coaching",
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      }
+    },
+    "availableLanguage": ["English", "Hindi"]
+  }
+}
 
 
 
