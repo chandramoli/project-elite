@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://wwww.projectelite.in', // ← 🔁 change to your actual domain
+  siteUrl: 'https://www.projectelite.in', // ← 🔁 change to your actual domain
   generateRobotsTxt: true,
   changefreq: 'monthly',
   priority: 0.7,
