@@ -57,7 +57,8 @@ const structuredData = {
     "position": index + 1,
     "item": {
       "@type": "Course",
-      "name": course,
+      "name": course.name,
+        "features": course.features || "",
       "description": 'Courses and training programs offered by Project ELITE to prepare students for campus placements.s',
       "provider": {
         "@type": "Organization",
